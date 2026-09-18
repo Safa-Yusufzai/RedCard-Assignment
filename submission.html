@@ -4,31 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Red Card Submission</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="submission.css">
 </head>
 
-<body class="submission-body">
-    <a href="index.html" class="back-button">← BACK</a>
+<body>
 
-    <main class="submission-page">
+    <!-- TOP WHITE HEADER -->
+    <header class="top-header">
 
-        <!-- TOP LOGO -->
-        <div class="submission-top">
-            <img
-                src="images/logo.png"
-                alt="Red Card Logo"
-                class="submission-logo"
-            >
-        </div>
+        <a href="index.html" class="back-arrow" aria-label="Back">
+            ←
+        </a>
+
+        <img
+            src="images/logo.png"
+            alt="Red Card Logo"
+            class="top-logo"
+        >
+
+    </header>
 
 
-        <!-- RED SUBMISSION AREA -->
-        <section class="submission-section">
+    <!-- SUBMISSION AREA -->
+    <main class="submission-area">
+
+        <div class="submission-container">
 
             <!-- LEFT SIDE -->
-            <div class="submission-left">
+            <section class="submission-info">
 
                 <h1>Submission</h1>
 
@@ -38,44 +44,34 @@
                     purpose other than judging Red Card 2018 winners.
                 </p>
 
-                <h3>
+                <h2>
                     Applications will close on the<br>
                     15th December 2017
-                </h3>
+                </h2>
 
-            </div>
+            </section>
 
 
-            <!-- RIGHT SIDE FORM -->
-            <div class="submission-right">
+            <!-- RIGHT SIDE -->
+            <section class="form-area">
 
-                <form>
+                <form id="submissionForm">
 
-                    <input
-                        type="text"
-                        placeholder="Name"
-                    >
+                    <input type="text" placeholder="Name" required>
 
-                    <input
-                        type="email"
-                        placeholder="Email Address"
-                    >
+                    <input type="email" placeholder="Email Address" required>
 
-                    <input
-                        type="text"
-                        placeholder="Organisation"
-                    >
+                    <input type="text" placeholder="Organisation" required>
 
 
                     <h2>Which Award</h2>
 
-                    <p class="form-help">
+                    <p class="form-note">
                         Please tick and provide details for all of the awards
                         you would like to be nominated for.
                     </p>
 
 
-                    <!-- AWARD 1 -->
                     <label class="award-option">
                         <input type="checkbox">
                         <span>Best Livestream</span>
@@ -86,7 +82,6 @@
                     ></textarea>
 
 
-                    <!-- AWARD 2 -->
                     <label class="award-option">
                         <input type="checkbox">
                         <span>Best Tour Campaign</span>
@@ -97,7 +92,6 @@
                     ></textarea>
 
 
-                    <!-- AWARD 3 -->
                     <label class="award-option">
                         <input type="checkbox">
                         <span>Best Sponsor Activation</span>
@@ -108,7 +102,6 @@
                     ></textarea>
 
 
-                    <!-- AWARD 4 -->
                     <label class="award-option">
                         <input type="checkbox">
                         <span>Best Use of Technology</span>
@@ -119,7 +112,6 @@
                     ></textarea>
 
 
-                    <!-- AWARD 5 -->
                     <label class="award-option">
                         <input type="checkbox">
                         <span>Best Online Campaign</span>
@@ -129,35 +121,36 @@
                         placeholder="Description & Results (max. 150 words)"
                     ></textarea>
 
-<button type="submit" class="submission-button" id="submitBtn">
-    SUBMIT
-</button>
 
-<div class="success-message" id="successMessage">
-    <span>✓</span>
-    Submission Successful
-</div>
+                    <button type="submit" id="submitBtn">
+                        SUBMIT
+                    </button>
+
+                    <div id="successMessage" class="success-message">
+                        ✓ Submission Successful
+                    </div>
 
                 </form>
 
-            </div>
+            </section>
 
-        </section>
+        </div>
 
     </main>
 
-<script>
-    const form = document.querySelector("form");
-    const submitBtn = document.getElementById("submitBtn");
-    const successMessage = document.getElementById("successMessage");
 
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
+    <script>
+        const form = document.getElementById("submissionForm");
+        const submitBtn = document.getElementById("submitBtn");
+        const successMessage = document.getElementById("successMessage");
 
-        submitBtn.style.display = "none";
-        successMessage.style.display = "block";
-    });
-</script>
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            submitBtn.style.display = "none";
+            successMessage.style.display = "block";
+        });
+    </script>
 
 </body>
 
