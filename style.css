@@ -1,0 +1,659 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000;
+}
+
+.page {
+    width: 760px;
+    max-width: 100%;
+    margin: 0 auto;
+    background: white;
+}
+
+/* =============== HEADER =============== */
+
+.hero {
+    min-height: 620px;
+    background: #a72b31;
+    color: white;
+    position: relative;
+    padding: 40px 75px 100px;
+}
+
+/* diagonal white corner */
+
+.hero::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left: 90px solid transparent;
+    border-bottom: 90px solid white;
+}
+
+.hero-content {
+    max-width: 610px;
+}
+
+.logo {
+    width: 105px;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.hero h2 {
+    color: #000;
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 35px;
+}
+
+.hero p {
+    font-size: 14px;
+    line-height: 1.55;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* =============== AWARDS =============== */
+
+.awards-section {
+    background: white;
+    padding: 60px 75px 45px;
+}
+
+.section-title {
+    color: #050505;
+    font-size: 36px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 32px;
+}
+
+.section-title img {
+    width: 28px;
+    height: auto;
+}
+
+/* =============== CLUBS =============== */
+
+.clubs {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+    align-items: start;
+}
+
+.club {
+    text-align: center;
+}
+
+.club img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.club p {
+    color: #a72b31;
+    font-size: 12px;
+    line-height: 1.15;
+    font-weight: 700;
+}
+
+/* =============== FOOTER =============== */
+
+.footer {
+    min-height: 240px;
+    background: #a72b31;
+    color: white;
+    padding: 70px 75px;
+    position: relative;
+}
+
+.footer::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left: 80px solid transparent;
+    border-bottom: 80px solid white;
+}
+
+.footer h2 {
+    font-size: 26px;
+    line-height: 1.15;
+    font-weight: 900;
+}
+
+/* =============== MOBILE =============== */
+
+@media (max-width: 650px) {
+
+    .hero {
+        padding: 35px 30px 80px;
+        min-height: auto;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .awards-section {
+        padding: 45px 25px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .clubs {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 8px;
+    }
+
+    .club img {
+        width: 52px;
+        height: 52px;
+    }
+
+    .club p {
+        font-size: 9px;
+    }
+
+    .footer {
+        padding: 55px 30px;
+    }
+
+    .footer h2 {
+        font-size: 21px;
+    }
+}/* ==========================================
+   SUBMISSION PAGE
+   ========================================== */
+
+.submission-body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.submission-page {
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
+    background: #ffffff;
+}
+
+/* TOP WHITE AREA */
+
+.submission-top {
+    height: 130px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 20px 35px;
+}
+
+.submission-logo {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+}
+
+
+/* MAIN RED AREA */
+
+.submission-section {
+    position: relative;
+    min-height: 900px;
+    background: #963236;
+    color: #ffffff;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+
+    padding: 60px 85px 90px;
+}
+
+/* WHITE TRIANGLE BOTTOM RIGHT */
+
+.submission-section::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left: 100px solid transparent;
+    border-bottom: 100px solid #ffffff;
+}
+
+
+/* LEFT SIDE */
+
+.submission-left {
+    padding-top: 170px;
+}
+
+.submission-left h1 {
+    margin: 0 0 20px;
+
+    font-size: 58px;
+    line-height: 1;
+
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.submission-left p {
+    max-width: 360px;
+
+    font-size: 13px;
+    line-height: 1.6;
+
+    margin-bottom: 22px;
+}
+
+.submission-left h3 {
+    font-size: 20px;
+    line-height: 1.25;
+
+    font-weight: 900;
+    color: #111111;
+}
+
+
+/* RIGHT FORM */
+
+.submission-right {
+    width: 100%;
+}
+
+.submission-right form {
+    width: 100%;
+}
+
+
+/* TOP INPUTS */
+
+.submission-right input[type="text"],
+.submission-right input[type="email"] {
+    width: 100%;
+    height: 43px;
+
+    display: block;
+
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.75);
+
+    color: #ffffff;
+
+    padding: 0 12px;
+    margin-bottom: 10px;
+
+    outline: none;
+
+    font-size: 12px;
+}
+
+.submission-right input::placeholder,
+.submission-right textarea::placeholder {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* WHICH AWARD */
+
+.submission-right h2 {
+    color: #090909;
+
+    font-size: 24px;
+    font-weight: 900;
+
+    margin: 18px 0 4px;
+}
+
+.form-help {
+    color: #ffffff;
+
+    font-size: 10px;
+    line-height: 1.4;
+
+    margin: 0 0 14px;
+}
+
+
+/* CHECKBOX ROW */
+
+.award-option {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    margin: 10px 0 7px;
+
+    cursor: pointer;
+}
+
+.award-option input[type="checkbox"] {
+    width: 13px;
+    height: 13px;
+
+    margin: 0;
+
+    accent-color: #ffffff;
+}
+
+
+/* TEXT AREAS */
+
+.submission-right textarea {
+    display: block;
+
+    width: 100%;
+    height: 62px;
+
+    resize: none;
+
+    background: transparent;
+
+    border: 2px solid rgba(255, 255, 255, 0.75);
+
+    color: #ffffff;
+
+    padding: 10px 12px;
+
+    outline: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+
+    margin-bottom: 10px;
+}
+
+
+/* SUBMIT BUTTON */
+
+.submission-button {
+    width: 100%;
+    height: 48px;
+
+    margin-top: 22px;
+
+    border: none;
+    background: #ffffff;
+
+    color: #555555;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.submission-button span {
+    font-size: 25px;
+    color: #777777;
+}
+
+
+/* HOVER */
+
+.submission-button:hover {
+    background: #f2f2f2;
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 700px) {
+
+    .submission-top {
+        height: 100px;
+        padding: 15px 20px;
+    }
+
+    .submission-logo {
+        width: 65px;
+        height: 65px;
+    }
+
+    .submission-section {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding: 45px 30px 100px;
+    }
+
+    .submission-left {
+        padding-top: 0;
+    }
+
+    .submission-left h1 {
+        font-size: 45px;
+    }
+
+    .submission-left p {
+        max-width: 100%;
+    }
+
+    .submission-right {
+        width: 100%;
+    }
+}.success-message {
+    display: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px;
+    margin-top: 15px;
+    background: white;
+    color: #777;
+    text-align: center;
+    font-size: 18px;
+}.submission-link-section {
+    background: #ffffff;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.submission-link-section h2 {
+    margin: 0 0 12px;
+    color: #202936;
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.submission-link-section p {
+    margin: 0 0 25px;
+    color: #777;
+    font-size: 16px;
+}
+
+.enter-button {
+    display: inline-block;
+    padding: 15px 42px;
+    background: #c93b40;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.enter-button:hover {
+    background: #202936;
+    transform: translateY(-2px);
+}/* ===== BACK BUTTON ===== */
+
+.back-button {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    z-index: 9999;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 18px;
+
+    background: #c92f35;
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+
+    border: 2px solid white;
+    border-radius: 5px;
+
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.back-button:hover {
+    background: #222;
+    transform: translateX(-3px);
+}/* =========================================
+   FINAL FULL SCREEN + MOBILE RESPONSIVE FIX
+   ========================================= */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background: #ffffff;
+}
+
+/* MAIN PAGE FULL WIDTH */
+.page {
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 100vh;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff;
+}
+
+/* RED TOP/HERO AREA */
+.hero,
+.header,
+.intro {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* AWARDS AREA */
+.awards-section {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* CLUBS */
+.clubs {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ALL IMAGES */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .page {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .hero,
+    .header,
+    .intro,
+    .awards-section,
+    .footer {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .clubs {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
